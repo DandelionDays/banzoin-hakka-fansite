@@ -1,6 +1,8 @@
 # banzoin-hakka-fansite
 Repository for my first website project, a fan site for the VTuber Banzoin Hakka. I worked from the tutorials in MDN's [Getting Started With the Web Guide](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web) to build this site. I used Serenade voice coding software to code the majority of this project. 
 
+This project can be viewed at https://dandeliondays.github.io/banzoin-hakka-fansite/ 
+
 ## Learning Goals:
 1. **Design a simple website** that explains information about Banzoin Hakka that could be understood by someone outside the fandom who is not familiar with VTubers/live streamers
 2. **Learn basic HTML and CSS** and make small upgrades to the methods described in MDN's Getting Started Guides to acheive an aesthetic result I preferred: used multiple fonts and learned to distinguish between them using the `font-weight` CSS property; tweaked the layout compared to the Guide; added an inset text box within the `<ul>` element that is centered using different `margin` CSS properties on each edge to overcome automatic `<ul>` styling; changed link styling to coordinate with website colour palette; used `id=""` attribute to target styling for `#local-time-display` and `#hakka-links` sections.
