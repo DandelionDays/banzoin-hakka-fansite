@@ -1,4 +1,4 @@
-# banzoin-hakka-fansite
+# About Banzoin Hakka Fansite
 Repository for my first website project, a fan site for the VTuber Banzoin Hakka. I worked from the tutorials in MDN's [Getting Started With the Web Guide](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web) to build this site. I used Serenade voice coding software to code the majority of this project. 
 
 This project can be viewed at https://dandeliondays.github.io/banzoin-hakka-fansite/ 
