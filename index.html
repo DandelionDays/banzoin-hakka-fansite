@@ -1,108 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Banzoin Hakka Fan Site</title>
+    <link rel="icon" href="images/hakka-metal-horns-dande-32x32.png" type="image/x-icon" />
+    <!--should also be able to save the icon as a .png rather than .ico; needs to be saved in same directory as index.html in order to work like this-->
+    <meta name="author" content="Dandelion (@5gooses on X)"/>
+    <meta name="description" content="A fansite for the VTuber Banzoin Hakka, intended as an introduction for an audience unfamiliar with VTubers. Also converts Hakka's usual stream time to your own local time."/>
     <link href="styles/styles.css" rel="stylesheet" /> <!--file path that links the HTML to the CSS; rel attribute states the relationship between the current document and the linked document-->
     <!--fonts: h1=big-shoulders-inline-display:900;h2+3=courier-prime:700;p=courier-prime:400-->
     <link rel="preconnect" href="https://fonts.bunny.net"> <!--connects to the bunny fonts server-->
     <link href="https://fonts.bunny.net/css?family=big-shoulders-inline-display:900|courier-prime:400,700" rel="stylesheet" /> <!--links to the Big Shoulders Inline Display and Courier Prime font families; numbers in name:number format specify the property value to add use with the font-weight property to the particular font within the font family-->
-
-    <!-- I had started out with inserting the CSS into a <style> element within the <head> element while using a web-based editor on my tablet, but realized MDN's Getting Started With the Web Guide specifies adding a <link> element with href="styles/style.css" attribute+value file path to point towards a SEPARATE CSS file in the styles directory. 
-    <style>
-      html {
-        background-color: #d9c9fe;
-        font-size: 16px;
-        font-family: 'Courier Prime', Courier, monospace;
-        font-weight: 400;
-        letter-spacing: 1px;
-        /*ok so this sets the default behaviour for the document, then individual selectors can be used for specific elements that should be different.*/
-      }
-      body {
-        width: auto; /*fit content keeps the content sized according to the width of the browser window? auto seems to do the same thing for this website?*/
-        max-width: 600px;
-        margin: 10px auto;
-        background-color: #c9b7f0;
-        padding: 20px;
-        border: 5px solid rgb(161, 124, 204);
-      }
-      h1 {
-        font-size: 60px;
-        font-family: 'Big Shoulders Inline Display', display;
-        font-weight: 900;
-        line-height: 0;
-        text-align: center; 
-      }
-      h2 {
-        font-size: 30px;
-        font-family: 'Courier Prime', Courier, monospace;
-        /*how do I get it to distinguish between 400 and 700 lol - use font weight*/
-        font-weight: 700;
-        text-align: center;
-        /*ok i found what was causing the awkward wrapping on each to,it was the line height property)
-        line-height: 0;*/
-        /*overflow wrap property does not seem to affect the wrapping behavior of h2
-        overflow-wrap: break-word;*/
-        /* this didn't work to keep h2 centred without wrapping, maybe it's because of text-align?
-        text-wrap: nowrap;
-        width: auto;*/
-      }
-      h3 {
-        font-size: 30px;
-        font-family: 'Courier Prime', Courier, monospace;
-        font-weight: 700;
-        line-height: 1;
-      }
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-        width: auto;
-      /*the following got me a good result on mobile on my ipad (image was resizing automatically with change in browser viewer width) but is giving me a very stretched result on desktop browser!
-      img {
-        display: block;
-        box-size: content-box;
-        width: 100%;
-      }*/      
-      }
-      #hakka-links {
-        text-align: center;
-      }
-    </style>
-    -->
-      <!--7/28/24 - ok commenting the font name and then adding the <link> element beneath each one is the first idea I had for organizing fonts per element type, but bunnyfont actually gives all the fonts to you in one link element as per below --> 
-        <!--h1 font-->
-          <!--<link rel="preconnect" href="https://fonts.bunny.net">-->
-          <!--<link href="https://fonts.bunny.net/css?family=big-shoulders-inline-display:900" rel="stylesheet" />-->
-        <!--h3 font-->
   </head>
   <body>
-    <h1>Banzoin Hakka</h1>
-      <h2>The CUTEST and the COOLEST Exorcist in ALL Xenokuni!</h2>
-      <img src="images/defaulthakkas.gif" alt="Image: A gif that alternates between two pictures of Banzoin Hakka wearing his default outfit and his emo-style second outfit and making the face he jokes is his Default Hakka face"/>
-        <h3>Who is Banzoin Hakka?</h3>
-          <p>Banzoin Hakka is a VTuber, someone who live streams video content and uses a digital character avatar that displays their facial expressions and body movement using motion capture technologies.</p>
-          <p>Like many VTubers, Hakka incorporates roleplay elements into his streams to depict a character. Hakka’s character is an exorcist who belongs to a group called Guild Tempus and lives in a fictional location called Xenokuni within the land of Elysium.</p>
-          <p>Hakka's fans love his humour and gregarious personality, his easy-going nature with his community, and his creativity and dedication.</p>
-          <p>Including Hakka, there are six active VTubers in Guild Tempus. Tempus is part of the Holostars English branch of the Japanese VTuber management and technology company Cover Corp.</p>
-
-        <h3>What does Banzoin Hakka do?</h3>
-          <ul>
-              <li><strong>Covers and Original Songs</strong> - Hakka is an accomplished vocalist and is especially well-known for his impressive range and metal vocals!</li>
-              <li><strong>Gaming, Talking, and Variety Streams</strong> - Hakka streams on YouTube most days of the week at 5pm PST. 
-                <h4 id="local-time-display">
-                  <p>In your local time, Hakka's streams are at:</p> 
-                  <samp>Local Time</samp>
-                </h4>
-                  <!--8/5/24 - scripts/main.js is selecting for "samp" in order to apply a new time to the "Local Time" text; figure out how to use the toLocaleTimeString() output method
-                  - maybe I should be using <output> instead of <samp>? I just picked <samp> as a test because it's an element that encloses inline text representing sample or quoted output from a computer program. But <output> may be more appropriate?
-                    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp
-                    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output -->
-                </li>
-              <li><strong>Special Events Streams</strong> - Hakka also streams live music performances and hosts special events such as game shows and interviews with guest streamers!</li>
-          </ul>
+    <header>
+      <h1>Banzoin Hakka</h1>
+        <h2>The CUTEST and the COOLEST Exorcist in ALL Xenokuni!</h2>
+        <figure id="hakka-hugging-hakkito">
+          <img 
+            src="images/hakkito-hug-dandelion-300.png" 
+            alt="A chibi-style illustration by Dandelion of Banzoin Hakka wearing pink pyjamas and hugging a round purple bird called a 'hakkito'. Hakkitos are the mascot that represents Banzoin Hakka's fans."/>
+          <figcaption id="hakka-hugging-hakkito-caption">Hakka's fans are called Hakkitos and are<br>represented by these round purple birds.</figcaption>
+        </figure>
+    </header>
+    <article id="who-is-hakka">
+      <h3>Who is Banzoin Hakka?</h3>
+        <p>Banzoin Hakka is a VTuber, someone who live streams video content and uses a digital character avatar that displays their facial expressions and body movement using motion capture technologies.</p>
+        <p>Like many VTubers, Hakka incorporates roleplay elements into his streams to depict a character. Hakka’s character is an exorcist who belongs to a group called Guild Tempus and lives in a fictional location called Xenokuni within the land of Elysium.</p>
+        <p>Hakka's fans love his humour and gregarious personality, his easy-going nature with his community, and his creativity and dedication.</p>
+        <p>Including Hakka, there are six active VTubers in Guild Tempus. Tempus is part of the Holostars English branch of the Japanese VTuber management and technology company Cover Corp.</p>
+    </article>
+    <article id="what-does-hakka-do">
+      <h3>What does Banzoin Hakka do?</h3>
+        <ul>
+            <li><strong>Covers and Original Songs</strong> - Hakka is an accomplished vocalist and is especially well-known for his impressive range and metal vocals!</li>
+            <li><strong>Gaming, Talking, and Variety Streams</strong> - Hakka streams on YouTube most days of the week at 5pm PST. 
+              <h4 id="local-time-display">
+                <p>In your local time, Hakka's streams are at:</p> 
+                <samp>Local Time</samp>
+              </h4>
+                <!--8/5/24 - scripts/main.js is selecting for "samp" in order to apply a new time to the "Local Time" text; figure out how to use the toLocaleTimeString() output method
+                - maybe I should be using <output> instead of <samp>? I just picked <samp> as a test because it's an element that encloses inline text representing sample or quoted output from a computer program. But <output> may be more appropriate?
+                  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp
+                  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output -->
+              </li>
+            <li><strong>Special Events Streams</strong> - Hakka also streams live music performances and hosts special events such as game shows and interviews with guest streamers!</li>
+        </ul>
+    </article>
+    <article id="where-to-find-hakka">
       <h3>Where to find Banzoin Hakka?</h3>
         <p id="hakka-links">
           <strong>
@@ -111,6 +57,7 @@
           <a href="https://holostars.hololivepro.com/en/talent/hakka/">Holostars Talent Profile</a>
           </strong>
         </p>
+    </article>
   <!--8/5/24 - add script to change Hakka's stream time information to local computer time
     - think I may be able to get this to work using the getTimezoneOffset() method of Date instances described in the MDN Javascript/Standard built-in objects/Date guide, and then... adding that number to Hakka's stream time? Hmmmm this seems like a convoluted way to go about it haha
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date

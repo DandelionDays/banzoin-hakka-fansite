@@ -1,96 +1,119 @@
 html {
-    background-color: #d9c9fe;
-    font-size: 100%;
+    background-color: #F6F0FE;
+    font-size: 1em;
     font-family: 'Courier Prime', Courier, monospace;
     font-weight: 400;
     letter-spacing: 1px;
     /*ok so this sets the default behaviour for the document, then individual selectors can be used for specific elements that should be different.*/
   }
-  body {
-    width: auto; /*fit content keeps the content sized according to the width of the browser window? auto seems to do the same thing for this website?*/
-    max-width: 600px;
-    margin: 10px auto;
-    background-color: #c9b7f0;
-    padding: 20px;
-    border: 5px solid rgb(161, 124, 204);
-  }
+body {
+  width: auto; /*fit content keeps the content sized according to the width of the browser window? auto seems to do the same thing for this website?*/
+  max-width: 600px;
+  margin: 10px auto;
+  background-color: #EAE1FE;
+  color: #3D3F54;
+  padding: 20px;
+  border: 5px solid rgb(161, 124, 204);
+}
+h1 {
+  font-size: 4.5rem;
+  font-family: 'Big Shoulders Inline Display', display;
+  font-weight: 900;
+  text-align: center; 
+  margin:auto
+}
+h2 {
+  font-size: 2rem;
+  font-family: 'Courier Prime', Courier, monospace;
+  /*how do I get it to distinguish between 400 and 700 lol - use font weight*/
+  font-weight: 700;
+  text-align: center;
+  /*7/30/24 - ok i found what was causing the awkward wrapping on h3, it was setting the line height property
+  line-height: 0;*/
+  /*7/30/24 - overflow wrap property does not seem to affect the wrapping behavior of h2
+  overflow-wrap: break-word;*/
+  /*7/30/24 - setting text-wrap:nowrap didn't work to keep h2 centred without wrapping, maybe it's because of text-align?
+  text-wrap: nowrap;
+  width: auto;*/
+  margin:auto
+}
+h3 {
+  font-size: 1.75rem;
+  font-family: 'Courier Prime', Courier, monospace;
+  font-weight: 700;
+  line-height: 1;
+  margin:auto
+}
+@media (max-width: 300px) {
   h1 {
-    font-size: 450%;
-    font-family: 'Big Shoulders Inline Display', display;
-    font-weight: 900;
-    text-align: center; 
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 200%;
-    font-family: 'Courier Prime', Courier, monospace;
-    /*how do I get it to distinguish between 400 and 700 lol - use font weight*/
-    font-weight: 700;
-    text-align: center;
-    /*7/30/24 - ok i found what was causing the awkward wrapping on h3, it was setting the line height property
-    line-height: 0;*/
-    /*7/30/24 - overflow wrap property does not seem to affect the wrapping behavior of h2
-    overflow-wrap: break-word;*/
-    /*7/30/24 - setting text-wrap:nowrap didn't work to keep h2 centred without wrapping, maybe it's because of text-align?
-    text-wrap: nowrap;
-    width: auto;*/
+    font-size: 1.25rem;
   }
   h3 {
-    font-size: 175%;
-    font-family: 'Courier Prime', Courier, monospace;
-    font-weight: 700;
-    line-height: 1;
+    font-size: 1.1rem;
   }
-  footer {
-    font-size: 60%;
-    color:#627386;
-  }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    width: auto;
-  /*7/31/24 - the following got me a good result on mobile on my ipad (image was resizing automatically with change in browser viewer width) but is giving me a very stretched result on desktop browser!
-  img {
-    display: block;
-    box-size: content-box;
-    width: 100%;
-  }*/      
-  } 
-  #local-time-display {
-    display: block;
-    background-color: #c0abee;
-    margin-right: 35px;
-    padding: 2%;
-    padding-bottom: 5%;
-    border: 5px solid rgb(161, 124, 204);
-    text-align: center;
-  }
-  #hakka-links {
-    text-align: center;
-    color: #5e3f6e;
-  }
-  a { /*a=anchor element=linking to a url*/
-    outline-color: transparent;
-  }
+}
+footer {
+  font-size: 0.7rem;
+  color:#636388;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100px;
+/*7/31/24 - the following got me a good result on mobile on my ipad (image was resizing automatically with change in browser viewer width) but is giving me a very stretched result on desktop browser!
+img {
+  display: block;
+  box-size: content-box;
+  width: 100%;
+}*/      
+} 
+#hakka-hugging-hakkito-caption {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 0.7rem;
+  color:#636388;
+}
 
-  a:link {
-    color: rgb(164, 124, 211);
-  }
+#local-time-display {
+  display: block;
+  background-color: #E1D2FE;
+  margin-right: 35px;
+  padding: 2%;
+  padding-bottom: 5%;
+  border: 5px solid rgb(161, 124, 204);
+  text-align: center;
+}
+#hakka-links {
+  text-align: center;
+  color: #5e3f6e;
+}
+a { /*a=anchor element=linking to a url*/
+  outline-color: transparent;
+}
 
-  a:visited {
-    color: #7b9ec7;
-  }
+a:link {
+  color: rgb(161, 124, 204);
+}
 
-  a:focus {
-    color:#5e3f6e
-  }
+a:visited {
+  color: #7b9ec7;
+}
 
-  a:hover {
-    color:#5e3f6e
-  }
+a:focus {
+  color:#5e3f6e
+}
 
-  a:active {
-    color: #b44d35;
-  }
+a:hover {
+  color:#5e3f6e
+}
+
+a:active {
+  color: #b44d35;
+}
 
