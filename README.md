@@ -11,4 +11,13 @@ View my ko-fi blog about Banzoin Hakka Fansite at https://ko-fi.com/post/Banzoin
 ## Customizations Implemented:
 1. **Added responsive behaviour to the website to improve display on mobile devices.** Used `margin: auto` and `width:auto` declarations on `body` and `img` selectors; chose to avoid using **line-height** property as directed since it was causing undesirable text wrapping behaviour on mobile devices.
 2. **Replaced JavaScript name personalization example** to convert a specific time to the viewer's local device time using the [toLocaleTimeString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString) method of Date instances.
-    
+## 31 Aug 2024 Accessibility Updates:
+- improved text to background contrast
+- improved semantic element use to improve user experience with screen readers
+- changed font unit from px to rem to function as intended for users who set browser-wide font size overrides 
+- implemented media queries to adjust font sizes per device size for better display
+## Planned Implementations:
+- swap media query usage to conform to mobile-first design practices
+- consider linking to Hakka's music
+- consider linking to clips of Hakka's content - ask hakkitos if they'd be interested in sharing
+
